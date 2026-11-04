@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Chapter 1 · Scroll explainer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Libre+Franklin:wght@400;500;600&family=Courier+Prime:wght@400;700&family=Kalam:wght@700&display=swap">
+<link rel="stylesheet" href="shared/story.css">
+<style>
+  /* Version A: the scene is scrubbed by scroll, like the rest of the site */
+  body.waiting{overflow:hidden}
+  .scroller{position:relative;height:560vh}
+  .sticky{position:sticky;top:0;height:100vh;height:100svh}
+  .sticky .stage{position:absolute;inset:0}
+  .scroll-hint{position:fixed;left:50%;bottom:calc(16px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);z-index:20;font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);transition:opacity .3s}
+  .after{padding-block:96px;text-align:center;font-family:var(--mono);font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--mist)}
+</style>
+</head>
+<body class="waiting">
+<header class="proto-bar"><a href="index.html">&larr; All versions</a><span>A · Scroll explainer</span></header>
+
+<section class="scroller" id="scroller" aria-label="Chapter 1, scene 1">
+  <div class="sticky"><div class="stage" id="stage"></div></div>
+</section>
+<p class="after">Scene 2 would start here.</p>
+<div class="scroll-hint" id="hint">Scroll to play &darr;</div>
+
+<div class="gate" id="gate">
+  <div class="gate-card">
+    <div class="eyebrow">chapter 1 · scene 1</div>
+    <h1>Born in 2001</h1>
+    <p>Scroll to move through the story. Sound and narration are on.</p>
+    <button class="play" id="go" type="button">Start</button>
+  </div>
+</div>
+
+<script src="shared/story.js"></script>
+<script>
+(() => {
+  const scroller = document.getElementById('scroller'), hint = document.getElementById('hint');
+  const scene = Story.mount(document.getElementById('stage'));
+  let prev = 0, started = false, queued = false;
+  function frame() {
+    const range = Math.max(1, scroller.offsetHeight - innerHeight);
+    const p = Math.max(0, Math.min(1, -scroller.getBoundingClientRect().top / range));
+    const t = p * Story.DURATION;
+    scene.render(t);
+    if (started) scene.fire(prev, t);
+    prev = t;
+    hint.style.opacity = p > 0.03 ? '0' : '1';
+  }
+  addEventListener('scroll', () => { if (!queued) { queued = true; requestAnimationFrame(() => { queued = false; frame(); }); } }, { passive: true });
+  addEventListener('resize', frame);
+  document.getElementById('go').addEventListener('click', () => {
+    Story.init();
+    started = true;
+    document.body.classList.remove('waiting');
+    document.getElementById('gate').hidden = true;
+    frame();
+  });
+  frame();
+})();
+</script>
+</body>
+</html>

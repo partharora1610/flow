@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Parth Arora · Wispr Flow portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Libre+Franklin:wght@400;500;600&family=Courier+Prime:wght@400;700&family=Tinos:wght@400;700&family=Kalam:wght@400;700&family=Noto+Sans+Devanagari:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="css/styles.css?v=20261104-story11-1">
+<link rel="stylesheet" href="css/ideas.css?v=20261104-campaign3-1">
+<script>document.documentElement.classList.add('locked');</script>
+</head>
+<body>
+<main>
+  <section class="select" id="select" aria-label="Player select">
+    <h1>Who's <mark>playing</mark><em>?</em></h1>
+    <p class="sub">Pick your name, then press start.</p>
+
+    <div class="pick" id="pick">
+      <p class="team-status" id="teamStatus" role="status">Loading the Wispr team…</p>
+      <div class="tiles" id="teamTiles" role="group" aria-label="Choose who you are"></div>
+      <template id="playerTile">
+        <button class="tile" type="button" aria-pressed="false">
+          <span class="glyph initials" aria-hidden="true"><span class="fallback"></span><img class="portrait" alt="" loading="lazy" decoding="async"></span>
+          <span><span class="name"></span><span class="blurb"></span></span>
+        </button>
+      </template>
+      <div class="go">
+        <button class="skip" id="visitor" type="button" data-id="curious" data-name="Just curious" aria-pressed="true">I'm just curious</button>
+        <button class="start" id="start" type="button">
+          <span id="startLabel">Press start as Just curious</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <div class="loader" id="loader" role="dialog" aria-modal="true" aria-labelledby="loaderTitle" hidden>
+    <div class="loader-card" id="loaderCard" tabindex="-1">
+      <div class="load-head">
+        <span class="load-ring" id="loadRing" role="img" aria-label="Loading">
+          <span class="dossier-photo"><span id="dossierInitials"></span><img id="dossierImg" alt="" hidden></span>
+          <span class="ring-check" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>
+        </span>
+        <h2 id="loaderTitle" aria-live="polite">Preparing the game</h2>
+      </div>
+      <div class="fact">
+        <span class="fact-label">Did you know?</span>
+        <p id="factText"></p>
+      </div>
+      <button class="start" id="loadGo" type="button" hidden><span>Let&rsquo;s go</span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+    </div>
+  </div>
+
+  <section class="tear" aria-label="Intro">
+    <div class="stage">
+
+      <div class="hud">
+        <div class="right">
+          <div class="bar" aria-hidden="true"><i id="hudBar"></i></div>
+        </div>
+      </div>
+
+      <div class="clean" id="clean">
+        <div class="floor"></div>
+        <div class="clean-top" id="cleanTop">
+          <div>
+            <div class="eyebrow" id="cleanEyebrow">scroll to clean up</div>
+            <h2 id="cleanTitle">Before we start, let me be a good boy and throw this in the dustbin.</h2>
+          </div>
+          <div class="stat" role="status" aria-live="polite"><span>on the floor</span><b id="floorCount">12</b></div>
+        </div>
+      </div>
+
+      <div class="paper" id="paper">
+        <div class="half l" id="halfL">
+          <div class="fiber"></div>
+          <div class="sheet">
+            <div>
+              <h2>Parth Arora</h2>
+              <div class="contact">[City], India · [email] · linkedin.com/in/[handle]</div>
+            </div>
+            <div class="sec">
+              <h3>Objective</h3>
+              <p><span class="strike">Results-driven, detail-oriented team player seeking a challenging role in a dynamic organization where I can leverage my skills to add value and grow.</span></p>
+              <span class="scrawl">says nothing</span>
+            </div>
+            <div class="sec">
+              <h3>Experience</h3>
+              <div class="row"><span>[Company] · [Role]</span><span>20XX to present</span></div>
+              <ul>
+                <li><span class="strike">Spearheaded cross-functional synergies to drive impact</span></li>
+                <li><span class="strike">Leveraged data-driven insights to optimize outcomes</span></li>
+                <li><span class="strike">Collaborated with stakeholders across verticals</span></li>
+              </ul>
+              <span class="scrawl" style="top:1.1em">but what did you do?</span>
+            </div>
+            <div>
+              <h3>Education</h3>
+              <div class="row"><span>[University] · [Degree]</span><span>CGPA [x.x]</span></div>
+            </div>
+            <div class="sec">
+              <h3>Skills</h3>
+              <p><span class="strike">MS Office · Communication · Leadership · Time management · Hard-working · Quick learner</span></p>
+              <span class="scrawl">so does everyone</span>
+            </div>
+            <div>
+              <h3>Interests</h3>
+              <p>Reading · Travelling · Music</p>
+            </div>
+            <div class="foot"><span>Formatted for hours. Skimmed in seconds.</span><span>Page 1 of 1</span></div>
+            <div class="stamp">applicant<br>1 of 2,000+</div>
+            <div class="sticky">Wispr got 2,000+ of these last week. They all looked like this.<b>Scroll down to cut this résumé.</b></div>
+          </div>
+        </div>
+        <div class="half r" id="halfR" aria-hidden="true" hidden>
+          <div class="fiber"></div>
+          <div class="sheet"></div>
+        </div>
+        <svg class="guide" id="guide" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><polyline id="guideLine" points=""></polyline></svg>
+        <div class="cutter" id="cutter" aria-hidden="true">
+          <svg id="avatar" viewBox="0 0 80 100" width="100%" height="100%"></svg>
+          <div class="bubble" id="bubble">Ooh, scissors.</div>
+        </div>
+        <div class="cut" id="cut" aria-hidden="true" style="left:50%">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4L8.1 15.9M14.5 14.5L20 20M8.1 8.1L12 12"/></svg>
+          tear here
+        </div>
+      </div>
+
+      <div class="scraps" id="scraps" aria-hidden="true"></div>
+      <svg class="bin-back" id="binBack" viewBox="0 0 100 115" preserveAspectRatio="none" aria-hidden="true"><ellipse class="bin-pit" cx="50" cy="10" rx="48" ry="9"/></svg>
+      <div class="balls" id="balls" aria-hidden="true"></div>
+      <svg class="bin-front" id="binFront" viewBox="0 0 100 115" preserveAspectRatio="none" aria-hidden="true"><path class="bin-body" d="M2 10 A48 9 0 0 0 98 10 L88 108 A38 7 0 0 1 12 108 Z"/><path class="bin-rib" d="M27 19 L30 113 M50 19.5 L50 115 M73 19 L70 113"/><path class="bin-rim" d="M2 10 A48 9 0 0 0 98 10"/><text class="bin-label" x="50" y="66" text-anchor="middle">RESUMES</text></svg>
+      <div class="clean-done" id="cleanDone">
+        <button class="start" id="toChapter" type="button"><span>Start the story</span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+      </div>
+
+      <div class="hint" id="hint">
+        <span class="hint-line">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg>
+          <span class="hint-copy"><strong>Scroll down to continue</strong><small>Your scrolling moves the scissors.</small></span>
+        </span>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="ch1" id="chapter1" aria-label="My story: From college to product and growth" hidden>
+    <audio preload="auto" src="public/assets/audio/parth-personal/01-college-2020.mp3"></audio>
+    <audio preload="auto" src="public/assets/audio/parth-personal/02-keyboard-days.mp3"></audio>
+    <audio preload="auto" src="public/assets/audio/parth-personal/04-graduation.mp3"></audio>
+    <audio preload="auto" src="public/assets/audio/parth-personal/05-build-my-own.mp3"></audio>
+    <audio preload="auto" src="public/assets/audio/parth-personal/06-stories-to-code.mp3"></audio>
+    <audio preload="auto" src="public/assets/audio/parth-personal/07-a-chance-to-learn.mp3"></audio>
+    <audio preload="auto" src="public/assets/audio/parth-personal/08-year-of-building.mp3"></audio>
+    <audio preload="auto" src="public/assets/audio/parth-personal/09-internships.mp3"></audio>
+    <audio preload="auto" src="public/assets/audio/parth-personal/09-casebase-product-generalist.mp3"></audio>
+    <audio preload="auto" src="public/assets/audio/parth-personal/12-us-customer-visits.mp3"></audio>
+    <audio preload="auto" src="public/assets/audio/parth-personal/14-anytime-fitness-growth.mp3"></audio>
+    <div class="ch1-frame">
+      <div class="ch1-stage" id="ch1Stage" tabindex="0" aria-label="Story scene" aria-describedby="ch1Prompt"></div>
+      <nav class="ch1-dots" id="ch1Dots" aria-label="Choose a story slide"><button type="button" aria-label="Slide 1: College in 2020" title="College in 2020"></button><button type="button" aria-label="Slide 2: Assignments and keyboard days" title="Assignments and keyboard days"></button><button type="button" aria-label="Slide 3: Graduation" title="Graduation"></button><button type="button" aria-label="Slide 4: Building my own products" title="Building my own products"></button><button type="button" aria-label="Slide 5: Stories and code" title="Stories and code"></button><button type="button" aria-label="Slide 6: A chance to learn" title="A chance to learn"></button><button type="button" aria-label="Slide 7: A year of learning by building" title="A year of learning by building"></button><button type="button" aria-label="Slide 8: Internships" title="Internships"></button><button type="button" aria-label="Slide 9: CaseBase product and code" title="CaseBase product and code"></button><button type="button" aria-label="Slide 10: US customer visits" title="US customer visits"></button><button type="button" aria-label="Slide 11: Anytime Fitness growth" title="Anytime Fitness growth"></button></nav>
+      <div class="ch1-controls">
+        <p class="ch1-prompt" id="ch1Prompt" role="status">Watch this scene. Your next cue will appear here.</p>
+        <button class="ch1-next" id="ch1Next" type="button" aria-describedby="ch1Prompt" disabled><span id="ch1NextLabel">Playing…</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+      </div>
+    </div>
+  </section>
+
+  <section class="ideas" id="ideas" aria-label="Ideas for my first 30 days" tabindex="-1" hidden>
+    <audio preload="auto" src="public/assets/audio/ideas/01-voice-notes-next-step.mp3"></audio>
+    <audio preload="auto" src="public/assets/audio/ideas/02-cab-email-moment.mp3"></audio>
+    <audio preload="auto" src="public/assets/audio/ideas/03-wispr-hai-toh.mp3"></audio>
+    <header class="ideas-header"><span>My first 30 days · ideas to explore</span><span id="ideasCount">01 / 03</span></header>
+
+    <article class="idea-panel" data-idea-panel aria-labelledby="productIdeaTitle">
+      <div class="idea-copy">
+        <span class="idea-kicker">01 / product exploration</span>
+        <h2 id="productIdeaTitle" tabindex="-1">Voice notes.<br> <mark>Next steps.</mark></h2>
+        <p class="idea-lead">Turn an incoming voice note into readable text and a reply you can edit.</p>
+        <p class="idea-context">WhatsApp already has transcripts. I’d explore what happens <em>after</em> you understand the note.</p>
+        <div class="idea-plan"><b>First 30 days</b><span>Talk to users <i>→</i> prototype a handoff <i>→</i> test it</span></div>
+        <p class="idea-signal"><span>Look for</span> Faster replies. A workflow people use again.</p>
+        <p class="idea-sources">Context: <a href="https://blog.whatsapp.com/introducing-voice-message-transcripts" target="_blank" rel="noopener noreferrer">WhatsApp transcripts</a> · <a href="https://docs.wisprflow.ai/articles/7689167034-can-i-upload-audio-files-to-wispr-flow-for-transcription" target="_blank" rel="noopener noreferrer">Flow’s current file support</a></p>
+      </div>
+
+      <div class="idea-demo">
+        <div class="wa-phone" id="decodeConcept" aria-label="WhatsApp voice-note concept with fictional demo messages">
+          <div class="wa-system"><span>9:41</span><span aria-hidden="true">▮▮▮  ▰</span></div>
+          <div class="wa-header"><span aria-hidden="true">‹</span><span class="wa-avatar">PT</span><div><b>Project team</b><small>WhatsApp · concept demo</small></div><svg viewBox="0 0 24 24" width="18" aria-hidden="true"><path d="M5 3l4 4-2 3q2 5 7 7l3-2 4 4q-2 5-7 2C7 18 3 13 2 7q0-3 3-4z"/></svg><span aria-hidden="true">⋮</span></div>
+          <div class="wa-chat">
+            <span class="wa-date">TODAY</span>
+            <p class="wa-prelude">Any update on the launch plan? <small>9:40 <span aria-hidden="true">✓✓</span></small></p>
+            <div class="wa-message">
+              <div class="wa-voice" aria-label="Illustrative incoming voice note, 12 seconds"><span class="wa-play" aria-hidden="true">▶</span><div class="wa-wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><span>0:12</span></div>
+              <button class="decode-button" id="decodeButton" type="button" aria-controls="noteTranscript replyDraftBlock"><svg viewBox="0 0 24 24" width="17" aria-hidden="true"><path d="M4 9v6m4-10v14m4-17v20m4-17v14m4-10v6"/></svg><span>Decode by Wispr Flow</span></button>
+              <div class="wa-transcript" id="noteTranscript" role="status" hidden><b>Transcript</b><p>Could you share the updated launch plan before our 3 pm call? Just the key milestones would be great.</p></div>
+            </div>
+            <p class="wa-nudge">↑ What if this were the next tap?</p>
+            <div class="wa-draft" id="replyDraftBlock" hidden><label for="replyDraft">Reply draft · edit before sending</label><textarea id="replyDraft" rows="2">Yes — I’ll share the key milestones before our 3 pm call.</textarea><small>You choose what gets sent.</small></div>
+            <div class="wa-compose" aria-hidden="true"><span>＋</span><span>Message</span><span>◉</span></div>
+          </div>
+        </div>
+        <p class="idea-demo-label">Interaction concept · integration to explore with the team</p>
+      </div>
+    </article>
+
+    <article class="idea-panel cab-campaign" data-idea-panel aria-labelledby="campaignIdeaTitle" hidden>
+      <div class="idea-copy">
+        <span class="idea-kicker">02 / one daily moment</span>
+        <h2 id="campaignIdeaTitle" tabindex="-1">Reply to emails.<br> <mark>Before the office.</mark></h2>
+        <p class="idea-lead">In the back seat of a cab: read an email, speak the reply with Flow, then review and send.</p>
+        <div class="idea-plan"><b>The campaign</b><span>Capture the commute <i>→</i> bring people into Flow <i>→</i> learn from actual use</span></div>
+        <p class="idea-signal"><span>Then understand the pattern</span> Did they try a reply? Where did they stop? Do they reach for Flow on the next cab ride?</p>
+        <p class="idea-sources">Use case: <a href="https://docs.wisprflow.ai/articles/9272331366-use-flow-with-microsoft-outlook" target="_blank" rel="noopener noreferrer">Dictating emails with Flow</a></p>
+      </div>
+
+      <div class="campaign-board">
+        <div class="campaign-frame">
+          <span class="campaign-scene">DAILY MOMENT / THE CAB’S BACK SEAT</span>
+          <h3>A cab ride.<br>A few emails done.</h3>
+          <svg class="campaign-art" viewBox="0 0 520 210" aria-hidden="true">
+            <path class="idea-line" d="M20 172V48h46v124M80 172V20h56v152M150 172V62h43v110M207 172V39h44v133M286 172V16h52v156M355 172V48h37v124M410 172V29h65v143M10 182h500"/>
+            <path class="idea-paper" d="M108 152l25-71q5-13 24-13h185q19 0 29 15l37 69 14 9v27H93v-24z"/>
+            <path class="idea-yellow" d="M140 143l20-52h170l31 52z"/><path class="idea-line" d="M251 91v52M104 166h32m239 0h32"/>
+            <circle class="idea-ink" cx="159" cy="184" r="18"/><circle class="idea-ink" cx="355" cy="184" r="18"/>
+            <circle class="idea-paper" cx="214" cy="112" r="13"/><path class="idea-line" d="M195 141q2-17 20-17h17l13 14m-12-5 14-15"/>
+            <rect class="idea-paper" x="243" y="103" width="14" height="25" rx="3"/><path class="idea-red" d="M278 101q13 10 0 20m9-28q22 20 0 37"/>
+          </svg>
+          <div class="cab-email"><span>INBOX / MEERA / LAUNCH PLAN</span><p>Can you confirm Friday’s launch and share the checklist?</p></div>
+          <div class="campaign-draft"><span>DICTATED WITH FLOW · REVIEW BEFORE SENDING</span><p>Friday works. I’ll share the checklist by four.</p></div>
+          <p class="campaign-steps">Read <i>→</i> speak <i>→</i> review <i>→</i> send</p>
+        </div>
+        <p class="campaign-caption">Campaign concept · fictional email</p>
+      </div>
+    </article>
+
+    <article class="idea-panel" data-idea-panel aria-labelledby="taglineIdeaTitle" hidden>
+      <div class="idea-copy">
+        <span class="idea-kicker">03 / a line for everyday India</span>
+        <h2 class="tagline-title" id="taglineIdeaTitle" tabindex="-1" lang="hi">Wispr है तो,<br> <mark>tension क्यों?</mark></h2>
+        <p class="idea-lead">A colleague helping you finish an email, in the words you’d actually use.</p>
+        <div class="idea-plan"><b>Campaign intent</b><span>Give a familiar office moment a line people can repeat.</span></div>
+        <p class="idea-signal"><span>What I’d test</span> Do people remember the line, say it to a colleague, and try Flow when typing gets in the way?</p>
+        <p class="idea-sources">The action: <a href="https://docs.wisprflow.ai/articles/6391241694-use-flow-hands-free" target="_blank" rel="noopener noreferrer">Click Flow, then speak</a></p>
+      </div>
+
+      <div class="office-story" aria-label="Fictional office campaign storyboard">
+        <div class="office-card office-problem">
+          <span class="campaign-scene">01 / ONE EMAIL LEFT. THE KEYBOARD STOPS.</span>
+          <div class="office-problem-row"><p class="hinglish" lang="hi">“Keyboard बंद हो गया.<br>ये email कैसे भेजूँ?”</p><svg viewBox="0 0 180 110" width="110" aria-hidden="true"><rect class="idea-paper" x="19" y="12" width="142" height="78" rx="5"/><path class="idea-line" d="M19 73h142M7 91h166l-12 11H19zM38 84h19m8 0h19m8 0h19m8 0h19"/><path class="idea-red" d="M70 32l40 27m0-27L70 59"/></svg></div>
+        </div>
+        <div class="office-card office-response">
+          <span class="campaign-scene">02 / A COLLEAGUE POINTS TO FLOW.</span>
+          <p class="hinglish" lang="hi">“Wispr है तो,<br><strong>tension क्यों?</strong>”</p>
+        </div>
+        <div class="office-card office-payoff">
+          <span class="campaign-scene">03 / CLICK FLOW. SPEAK THE REPLY.</span>
+          <p class="office-draft"><svg viewBox="0 0 24 24" width="22" aria-hidden="true"><path d="M4 9v6m4-10v14m4-17v20m4-17v14m4-10v6"/></svg><span>Friday works. I’ll share the checklist by four.</span></p>
+          <small>Email draft <i>→</i> review <i>→</i> send.</small>
+        </div>
+        <p class="campaign-caption">Wispr Flow · campaign concept · fictional scene</p>
+      </div>
+    </article>
+
+    <footer class="ideas-controls"><button id="ideasPrev" class="ideas-back" type="button" hidden>← Product idea</button><p id="ideasStatus" role="status">Listen and explore the idea.</p><button id="ideasReplay" class="ideas-replay" type="button" aria-label="Replay idea narration" title="Replay narration">↻</button><button id="ideasNext" class="start" type="button" disabled>Next idea →</button><button id="restart" class="start" type="button" hidden>Start from very start</button></footer>
+  </section>
+
+</main>
+
+<script src="js/chapter1.js?v=20261104-story11-1"></script>
+<script src="js/ideas.js?v=20261104-campaign3-1"></script>
+<script src="js/main.js?v=20261104-story11-2"></script>
+</body>
+</html>

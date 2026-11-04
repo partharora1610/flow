@@ -1,0 +1,63 @@
+{
+  "about": "Wispr Flow people named in public, work-related sources. Names and roles only. Collected 2026-10-31 for the 'Who's playing?' screen.",
+  "photos": "None saved. The official Wispr site shows no staff photos, and LinkedIn photos were not scraped. Use initials or illustrated avatars, or add a photo only with that person's permission.",
+  "people": [
+    {
+      "id": "tanay-kothari",
+      "name": "Tanay Kothari",
+      "role": "Co-founder and CEO",
+      "initials": "TK",
+      "verified": true,
+      "sources": [
+        "https://techcrunch.com/2026/05/09/voice-ai-in-india-is-hard-wispr-flow-is-betting-on-it-anyway/",
+        "https://pulse2.com/wispr-raises-280-million-at-2-billion-valuation-as-revenue-grows-150-quarterly-and-voice-ai-push-accelerates"
+      ],
+      "photo": null
+    },
+    {
+      "id": "sahaj-garg",
+      "name": "Sahaj Garg",
+      "role": "Co-founder (reported as CTO)",
+      "initials": "SG",
+      "verified": true,
+      "note": "The press release confirms co-founder. The CTO title comes from secondary profiles.",
+      "sources": [
+        "https://www.silicon.co.uk/press-release/wispr-raises-12m-and-launches-wispr-flow-to-replace-keyboards-with-voice"
+      ],
+      "photo": null
+    },
+    {
+      "id": "nimisha-mehta",
+      "name": "Nimisha Mehta",
+      "role": "Leads India operations",
+      "initials": "NM",
+      "verified": true,
+      "note": "Likely the Nimisha whose LinkedIn post the challenge page mentions. Check this before using her name on the site.",
+      "sources": [
+        "https://techcrunch.com/2026/05/09/voice-ai-in-india-is-hard-wispr-flow-is-betting-on-it-anyway/"
+      ],
+      "photo": null
+    },
+    {
+      "id": "ariya-rastrow",
+      "name": "Ariya Rastrow",
+      "role": "Chief Scientist, leads the Wispr Advanced Interfaces Lab",
+      "initials": "AR",
+      "verified": true,
+      "sources": [
+        "https://pulse2.com/wispr-raises-280-million-at-2-billion-valuation-as-revenue-grows-150-quarterly-and-voice-ai-push-accelerates"
+      ],
+      "photo": null
+    },
+    {
+      "id": "philip-messlehner",
+      "name": "Philip Messlehner",
+      "role": "Engineering lead (unconfirmed)",
+      "initials": "PM",
+      "verified": false,
+      "note": "Seen only in a search snippet of his own LinkedIn post. Not opened or confirmed elsewhere.",
+      "sources": [],
+      "photo": null
+    }
+  ]
+}

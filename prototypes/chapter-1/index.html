@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Chapter 1 · Three versions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Libre+Franklin:wght@400;500;600&family=Courier+Prime:wght@400;700&family=Kalam:wght@700&display=swap">
+<link rel="stylesheet" href="shared/story.css">
+<style>
+  .hub{max-width:1100px;margin:0 auto;box-sizing:border-box;display:flex;flex-direction:column;gap:28px;
+    padding-block:72px 64px;padding-left:max(16px, env(safe-area-inset-left,0px));padding-right:max(16px, env(safe-area-inset-right,0px))}
+  .hub h1{margin:0;font-family:var(--display);font-weight:700;font-size:clamp(40px, 7vw, 84px);line-height:.92;text-transform:uppercase;text-wrap:balance}
+  .hub h1 mark{background:var(--volt);color:var(--ink);padding:0 .1em}
+  .lede{margin:0;max-width:60ch;font-size:18px;line-height:1.5;color:var(--mist)}
+  .beats{margin:0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:10px}
+  .beats li{background:var(--ink);color:#F4EEE2;padding:7px 12px;font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+  .cards{display:grid;grid-template-columns:repeat(3, minmax(0,1fr));gap:22px}
+  .card{position:relative;display:flex;flex-direction:column;gap:10px;padding:24px 22px;background:var(--slate);box-shadow:var(--soft);color:var(--ink);text-decoration:none;transition:transform .12s ease-out, box-shadow .12s ease-out}
+  .card:nth-child(1){transform:rotate(-1deg)} .card:nth-child(2){transform:rotate(.8deg)} .card:nth-child(3){transform:rotate(-.6deg)}
+  .card:hover,.card:focus-visible{transform:translateY(-4px) rotate(0);box-shadow:var(--lift)}
+  .card .letter{font-family:var(--display);font-weight:700;font-size:56px;line-height:.8;color:var(--red)}
+  .card h2{margin:0;font-family:var(--display);font-weight:700;font-size:26px;text-transform:uppercase;line-height:1}
+  .card p{margin:0;font-size:15px;line-height:1.45;color:var(--mist)}
+  .card .fit{margin-top:auto;padding-top:8px;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
+  .foot{font-size:14px;line-height:1.5;color:var(--mist);max-width:70ch}
+  @media (max-width:820px){ .cards{grid-template-columns:1fr} }
+</style>
+</head>
+<body>
+<main class="hub">
+  <div class="eyebrow">chapter 1 · scene 1 · three ways to tell it</div>
+  <h1>Born in <mark>2001</mark></h1>
+  <p class="lede">The same 16-second scene, told three ways. Same art, same sounds, same narration. Only how the viewer moves through it changes.</p>
+  <ul class="beats">
+    <li>1 · born in 2001</li><li>2 · school</li><li>3 · wrote a lot</li><li>4 · sweating, no Wispr Flow</li>
+  </ul>
+  <div class="cards">
+    <a class="card" href="a-scroll.html">
+      <span class="letter">A</span>
+      <h2>Scroll explainer</h2>
+      <p>The viewer scrolls and the scene scrubs forward and back, the same way the resume tear works now.</p>
+      <span class="fit">Fits the current site best</span>
+    </a>
+    <a class="card" href="b-film.html">
+      <span class="letter">B</span>
+      <h2>Auto-play film</h2>
+      <p>A letterboxed mini explainer video. Press play and it runs on its own, with pause and a scrubber.</p>
+      <span class="fit">Closest to a Vox video</span>
+    </a>
+    <a class="card" href="c-stories.html">
+      <span class="letter">C</span>
+      <h2>Tap-through stories</h2>
+      <p>Four quick cards in a phone frame that play and move on by themselves. Tap to skip or go back.</p>
+      <span class="fit">Best on phones</span>
+    </a>
+  </div>
+  <p class="foot">The narration uses your browser's built-in voice as a stand-in. The plan is to replace it with Parth's own recorded voice. Sound effects are generated in the browser.</p>
+  <p class="foot"><a href="../../index.html">&larr; Back to the main page</a></p>
+</main>
+</body>
+</html>

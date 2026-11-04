@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Chapter 1 · Tap-through stories</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Libre+Franklin:wght@400;500;600&family=Courier+Prime:wght@400;700&family=Kalam:wght@700&display=swap">
+<link rel="stylesheet" href="shared/story.css">
+<style>
+  /* Version C: Instagram-style story cards. Each beat is one card that plays, then moves on. */
+  .wrap{min-height:100vh;min-height:100svh;box-sizing:border-box;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;
+    padding-block:64px 24px;padding-left:max(16px, env(safe-area-inset-left,0px));padding-right:max(16px, env(safe-area-inset-right,0px))}
+  .phone{position:relative;height:min(78vh, 760px);aspect-ratio:9 / 16;max-width:100%;border-radius:28px;overflow:hidden;box-shadow:var(--lift);background:var(--ground)}
+  .phone .stage{position:absolute;inset:0}
+  .segs{position:absolute;top:12px;left:12px;right:12px;z-index:5;display:flex;gap:5px}
+  .segs i{flex:1 1 0;height:4px;border-radius:999px;background:rgba(22,21,19,.18);overflow:hidden}
+  .segs i b{display:block;height:100%;width:0;background:var(--ink)}
+  .tap{all:unset;position:absolute;top:0;bottom:0;z-index:4;cursor:pointer}
+  .tap.prev{left:0;width:32%} .tap.next{right:0;width:68%}
+  .tap:focus-visible{outline:2.5px solid var(--red);outline-offset:-6px}
+  .note{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--mist);text-align:center}
+  .again{position:absolute;left:50%;bottom:22%;z-index:6;transform:translateX(-50%)}
+</style>
+</head>
+<body>
+<header class="proto-bar"><a href="index.html">&larr; All versions</a><span>C · Tap-through stories</span></header>
+
+<main class="wrap">
+  <div class="phone">
+    <div class="stage portrait" id="stage"></div>
+    <div class="segs" id="segs" aria-hidden="true"></div>
+    <button class="tap prev" id="prev" type="button" aria-label="Previous card"></button>
+    <button class="tap next" id="next" type="button" aria-label="Next card"></button>
+    <button class="play again" id="again" type="button" hidden>Watch again</button>
+  </div>
+  <p class="note">Tap right to skip ahead, left to go back.</p>
+</main>
+
+<div class="gate" id="gate">
+  <div class="gate-card">
+    <div class="eyebrow">chapter 1 · scene 1</div>
+    <h1>Born in 2001</h1>
+    <p>Four quick cards. Sound and narration are on.</p>
+    <button class="play" id="go" type="button">Start</button>
+  </div>
+</div>
+
+<script src="shared/story.js"></script>
+<script>
+(() => {
+  const scene = Story.mount(document.getElementById('stage'));
+  const segs = document.getElementById('segs'), again = document.getElementById('again');
+  const CARDS = Story.CARDS;
+  segs.innerHTML = CARDS.map(() => '<i><b></b></i>').join('');
+  const bars = [...segs.querySelectorAll('b')];
+  let k = 0, t = CARDS[0][0], prev = t - 0.001, playing = false, last = 0;
+  function bars_() {
+    bars.forEach((b, i) => {
+      const [a, z] = CARDS[i];
+      b.style.width = (i < k ? 100 : i > k ? 0 : Math.min(100, ((t - a) / (z - a)) * 100)) + '%';
+    });
+  }
+  function go(i) {
+    Story.hush();
+    k = Math.max(0, Math.min(CARDS.length - 1, i));
+    t = CARDS[k][0]; prev = t - 0.001;
+    again.hidden = true;
+    if (!playing) { playing = true; last = performance.now(); requestAnimationFrame(loop); }
+  }
+  function loop(now) {
+    if (!playing) return;
+    t += (now - last) / 1000; last = now;
+    const end = CARDS[k][1];
+    if (t >= end) {
+      if (k < CARDS.length - 1) { k++; t = CARDS[k][0]; prev = t - 0.001; }
+      else { t = end; playing = false; scene.render(t); scene.fire(prev, t); bars_(); again.hidden = false; return; }
+    }
+    scene.render(t); scene.fire(prev, t); prev = t; bars_();
+    requestAnimationFrame(loop);
+  }
+  document.getElementById('next').addEventListener('click', () => go(k + 1 < CARDS.length ? k + 1 : k));
+  document.getElementById('prev').addEventListener('click', () => go(k - 1));
+  again.addEventListener('click', () => go(0));
+  document.getElementById('go').addEventListener('click', () => {
+    Story.init();
+    document.getElementById('gate').hidden = true;
+    go(0);
+  });
+  scene.render(t); bars_();
+})();
+</script>
+</body>
+</html>

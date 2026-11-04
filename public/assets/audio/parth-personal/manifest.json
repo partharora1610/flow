@@ -1,0 +1,87 @@
+{
+  "provider": "ElevenLabs",
+  "voice": "Parth Personal Voice",
+  "voiceId": "ANTKIS59KKSvXuBolVQ7",
+  "model": "Eleven v4",
+  "generatedOn": "2026-11-04",
+  "timeZone": "Asia/Kolkata",
+  "delivery": "Natural and conversational, with no emotion tags.",
+  "settings": {
+    "stability": 0.65,
+    "similarity": 0.75
+  },
+  "format": {
+    "codec": "mp3",
+    "sampleRateHz": 44100,
+    "bitrateKbps": 128,
+    "channels": 1
+  },
+  "clips": [
+    {
+      "beat": 1,
+      "file": "01-college-2020.mp3",
+      "text": "I entered college in 2020.",
+      "durationSeconds": 2.351
+    },
+    {
+      "file": "02-keyboard-days.mp3",
+      "text": "And college meant assignments. Lots of them. All typed by hand. No Wispr Flow back then. Just a keyboard, and very tired fingers.",
+      "durationSeconds": 9.717,
+      "beat": 2
+    },
+    {
+      "beat": 3,
+      "file": "04-graduation.mp3",
+      "text": "Then I graduated. B.Com. Honours, Delhi University. Degree in hand. No idea what came next.",
+      "durationSeconds": 7.001
+    },
+    {
+      "beat": 4,
+      "file": "05-build-my-own.mp3",
+      "text": "I didn’t know what job I wanted. But I knew I wanted to build something of my own.",
+      "durationSeconds": 5.251
+    },
+    {
+      "beat": 5,
+      "file": "06-stories-to-code.mp3",
+      "text": "I’d loved telling stories since childhood. Now I wanted to build products people would love using. So this commerce graduate decided to learn to code.",
+      "durationSeconds": 9.561
+    },
+    {
+      "beat": 6,
+      "file": "07-a-chance-to-learn.mp3",
+      "text": "I’m still not sure where that confidence came from. No engineering degree. But I gave myself a chance to learn.",
+      "durationSeconds": 7.236
+    },
+    {
+      "beat": 7,
+      "file": "08-year-of-building.mp3",
+      "text": "I spent the next year teaching myself how to build products. No job. From product decisions to code to getting it running. Whatever I didn’t understand, I learned.",
+      "durationSeconds": 10.266
+    },
+    {
+      "beat": 8,
+      "file": "09-internships.mp3",
+      "text": "Within a year, I could code reasonably well. A few internships followed. Everything was new, and every day brought something to learn.",
+      "durationSeconds": 8.046
+    },
+    {
+      "file": "09-casebase-product-generalist.mp3",
+      "text": "Then I joined CaseBase as its second team member, in a founding product role. It was a generalist role. I wrote code, built features, and helped figure out what the product needed next.",
+      "durationSeconds": 10.998,
+      "beat": 9
+    },
+    {
+      "beat": 10,
+      "file": "12-us-customer-visits.mp3",
+      "text": "That work took me to the US. I visited community service and community corrections organizations, meeting the people we were building for.",
+      "durationSeconds": 8.046
+    },
+    {
+      "beat": 11,
+      "file": "14-anytime-fitness-growth.mp3",
+      "text": "Today, I’m also working as a growth consultant for Anytime Fitness India. Different challenges. The same curiosity.",
+      "durationSeconds": 7.706
+    }
+  ]
+}

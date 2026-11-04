@@ -1,0 +1,29 @@
+{
+  "provider": "ElevenLabs",
+  "voice": "Parth Personal Voice",
+  "voiceId": "ANTKIS59KKSvXuBolVQ7",
+  "model": "Eleven v4",
+  "generatedOn": "2026-11-04",
+  "delivery": "Natural and conversational, without emotion tags.",
+  "settings": {
+    "stability": 0.65,
+    "similarity": 0.75
+  },
+  "clips": [
+    {
+      "file": "01-voice-notes-next-step.mp3",
+      "text": "Here are two ideas I’d explore in my first thirty days. First: incoming voice notes. WhatsApp already offers transcripts. I’d prototype a Flow handoff that helps you understand the note and prepare a reply you can review.",
+      "durationSeconds": 13.949
+    },
+    {
+      "file": "02-cab-email-moment.mp3",
+      "text": "I’d start with one everyday moment: catching up on emails from the back seat of a cab. Show someone reading a message, speaking a reply with Flow, then reviewing it. Bring people into Flow through that moment, and learn what they try, where they stop, and whether they use it again.",
+      "durationSeconds": 16.588
+    },
+    {
+      "file": "03-wispr-hai-toh.mp3",
+      "text": "The campaign line? Wispr है तो, tension क्यों? Your keyboard stops working just before an email needs to go out. A colleague points to Flow. You speak the reply, review it, and carry on. A small office moment that gives the line a reason to stick.",
+      "durationSeconds": 16.117
+    }
+  ]
+}

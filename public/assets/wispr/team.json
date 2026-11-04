@@ -1,0 +1,319 @@
+{
+  "company": "Wispr Flow",
+  "researched_on": "2026-11-01",
+  "challenge_url": "https://wispr-seven-day-challenge.wispr-flow-5934.chatgpt.site/",
+  "coverage": "Curated public-source roster of founders, India team members, and an India-launch contributor; not a complete employee directory.",
+  "notes": [
+    "India membership follows explicit public work-location evidence, not nationality or names. Public profile locations may become outdated.",
+    "Early hires and people with founding functional roles are distinguished from company co-founders.",
+    "Some LinkedIn profiles were readable only through search indexing; individual public posts and other primary pages supplied supporting evidence.",
+    "Photo paths are relative to this JSON file. Downloaded images retain their original rights; public availability does not establish a reuse license. Founder headshots are explicitly offered for download in Wispr's media kit."
+  ],
+  "people": [
+    {
+      "id": "tanay-kothari",
+      "name": "Tanay Kothari",
+      "initials": "TK",
+      "group": "founders",
+      "role": "Co-founder and CEO",
+      "role_sources": [
+        "https://wisprflow.ai/media-kit"
+      ],
+      "linkedin_url": "https://www.linkedin.com/in/tankots",
+      "location": {
+        "label": "San Francisco, California, United States",
+        "status": "listed_outside_india",
+        "sources": [
+          "https://www.linkedin.com/in/tankots"
+        ]
+      },
+      "facts": [
+        {
+          "text": "Grew up in Delhi and personally tested Flow in noisy Indian settings for its India launch.",
+          "source_url": "https://www.linkedin.com/posts/tankots_i-grew-up-in-delhi-dreaming-of-building-technology-activity-7454371393615421440-nlsx"
+        },
+        {
+          "text": "Taught Stanford's Deep Learning course alongside Andrew Ng.",
+          "source_url": "https://wisprflow.ai/media-kit"
+        }
+      ],
+      "photo": {
+        "path": "people/tanay-kothari.webp",
+        "source_url": "https://cdn.prod.website-files.com/682f84b3838c89f8ff7667db/68d421228a0d64552305c492_Tanay%20headshot%20v2.webp",
+        "source_page": "https://wisprflow.ai/media-kit",
+        "provenance": "Official downloadable founder headshot",
+        "width": 1997,
+        "height": 1835,
+        "face": {
+          "cx": 0.487,
+          "cy": 0.241,
+          "w": 0.146
+        }
+      }
+    },
+    {
+      "id": "sahaj-garg",
+      "name": "Sahaj Garg",
+      "initials": "SG",
+      "group": "founders",
+      "role": "Co-founder and CTO",
+      "role_sources": [
+        "https://wisprflow.ai/media-kit"
+      ],
+      "linkedin_url": "https://www.linkedin.com/in/sahajgarg",
+      "location": {
+        "label": "San Francisco Bay Area, United States",
+        "status": "listed_outside_india",
+        "sources": [
+          "https://www.linkedin.com/in/sahajgarg"
+        ]
+      },
+      "facts": [
+        {
+          "text": "Was employee number five and AI team lead at Luminous Computing before co-founding Wispr.",
+          "source_url": "https://wisprflow.ai/media-kit"
+        },
+        {
+          "text": "Walked 500 miles across northern Spain on the Camino de Santiago between undergraduate quarters.",
+          "source_url": "https://www.linkedin.com/posts/sahajgarg_after-being-head-down-for-the-last-4-years-activity-7422300948653539329-IQd-"
+        }
+      ],
+      "photo": {
+        "path": "people/sahaj-garg.webp",
+        "source_url": "https://cdn.prod.website-files.com/682f84b3838c89f8ff7667db/68d4208d60c2cd1d16dceb84_Sahaj%20headshot-min.webp",
+        "source_page": "https://wisprflow.ai/media-kit",
+        "provenance": "Official downloadable founder headshot",
+        "width": 1908,
+        "height": 1065,
+        "face": {
+          "cx": 0.513,
+          "cy": 0.229,
+          "w": 0.131
+        }
+      }
+    },
+    {
+      "id": "nimisha-mehta",
+      "name": "Nimisha Mehta",
+      "initials": "NM",
+      "group": "india_team",
+      "role": "India Lead",
+      "role_sources": [
+        "https://www.linkedin.com/posts/tankots_i-grew-up-in-delhi-dreaming-of-building-technology-activity-7454371393615421440-nlsx",
+        "https://growthx.club/events/host/6a1430ec19146370d6cf5366"
+      ],
+      "linkedin_url": "https://www.linkedin.com/in/nimisha-mehta-593758166",
+      "location": {
+        "label": "Bengaluru, Karnataka, India",
+        "status": "confirmed_india",
+        "sources": [
+          "https://www.linkedin.com/posts/nimisha-mehta-593758166_i-cold-dmd-the-ceo-of-a-700m-startup-little-activity-7439873217118392321-OH00",
+          "https://in.linkedin.com/in/nimisha-mehta-593758166"
+        ]
+      },
+      "facts": [
+        {
+          "text": "Joined after a cold message sharing her experience as an enthusiastic Flow user turned into a conversation about building its India market.",
+          "source_url": "https://www.linkedin.com/posts/nimisha-mehta-593758166_i-cold-dmd-the-ceo-of-a-700m-startup-little-activity-7439873217118392321-OH00"
+        },
+        {
+          "text": "Her India team wrapped 100 Bengaluru auto-rickshaws as part of its marketing campaigns.",
+          "source_url": "https://www.linkedin.com/posts/nimisha-mehta-593758166_hiring-activity-7473673858194190336-hcGP"
+        }
+      ],
+      "photo": {
+        "path": "people/nimisha-mehta.jpeg",
+        "source_url": "https://public-cdn.growthx.club/USER/nimisha_mehta_cb98020263/PROFILE_PHOTO/5808b4d703-nimisha_mehta_cb98020263.jpeg",
+        "source_page": "https://growthx.club/events/host/6a1430ec19146370d6cf5366",
+        "provenance": "Named GrowthX host profile linked to her exact LinkedIn account",
+        "width": 400,
+        "height": 400,
+        "face": {
+          "cx": 0.496,
+          "cy": 0.316,
+          "w": 0.29
+        }
+      }
+    },
+    {
+      "id": "rohan-kochhar",
+      "name": "Rohan Kochhar",
+      "initials": "RK",
+      "group": "india_team",
+      "role": "Growth; founding India team",
+      "role_sources": [
+        "https://topmate.io/rohan_kochhar"
+      ],
+      "linkedin_url": "https://www.linkedin.com/in/rohan-kochhar-93721115b",
+      "location": {
+        "label": "New Delhi, Delhi, India (listed Wispr work location)",
+        "status": "confirmed_india",
+        "sources": [
+          "https://in.linkedin.com/in/rohan-kochhar-93721115b"
+        ]
+      },
+      "facts": [
+        {
+          "text": "Worked in strategy and operations at OpenAI India before joining Wispr's founding India team.",
+          "source_url": "https://topmate.io/rohan_kochhar"
+        },
+        {
+          "text": "Offers AI and career conversations for students and people exploring how to enter the field.",
+          "source_url": "https://topmate.io/rohan_kochhar"
+        }
+      ],
+      "photo": {
+        "path": "people/rohan-kochhar.jpeg",
+        "source_url": "https://static.topmate.io/profile_pic_2650087_2a25a0cc-622e-4fff-82ca-4fbd7bf1b65b.jpeg",
+        "source_page": "https://topmate.io/rohan_kochhar",
+        "provenance": "Portrait on his own Topmate profile",
+        "width": 2880,
+        "height": 2880,
+        "face": {
+          "cx": 0.516,
+          "cy": 0.271,
+          "w": 0.213
+        }
+      },
+      "notes": [
+        "Growth scope and founding India membership are self-described; no longer formal title is asserted."
+      ]
+    },
+    {
+      "id": "shivam-bhotika",
+      "name": "Shivam Bhotika",
+      "initials": "SB",
+      "group": "india_team",
+      "role": "India Growth",
+      "role_sources": [
+        "https://getdiscovr.ai/",
+        "https://www.linkedin.com/posts/shivambhotika_some-news-ive-joined-wispr-flow-ive-activity-7457344314478682112-5LPe"
+      ],
+      "linkedin_url": "https://www.linkedin.com/in/shivambhotika",
+      "location": {
+        "label": "Bengaluru, Karnataka, India (listed Wispr work location)",
+        "status": "confirmed_india",
+        "sources": [
+          "https://in.linkedin.com/in/shivambhotika"
+        ]
+      },
+      "facts": [
+        {
+          "text": "Says he is drawn to the early, unstructured stages of building startups and working in venture.",
+          "source_url": "https://www.linkedin.com/posts/shivambhotika_some-news-ive-joined-wispr-flow-ive-activity-7457344314478682112-5LPe"
+        },
+        {
+          "text": "Describes creator campaigns that show Flow inside real research-to-publishing workflows.",
+          "source_url": "https://getdiscovr.ai/"
+        }
+      ],
+      "photo": {
+        "path": "people/shivam-bhotika.webp",
+        "source_url": "https://getdiscovr.ai/_astro/wisprflow.CT5VXn3h.webp",
+        "source_page": "https://getdiscovr.ai/",
+        "provenance": "Named portrait beside his customer testimonial",
+        "width": 160,
+        "height": 160,
+        "face": {
+          "cx": 0.512,
+          "cy": 0.236,
+          "w": 0.196
+        }
+      },
+      "notes": [
+        "Employment is self-confirmed. India Growth is the title attached to his named Discovr testimonial; formal HR title was not independently available."
+      ]
+    },
+    {
+      "id": "vasundhara-bhagat",
+      "name": "Vasundhara Bhagat",
+      "initials": "VB",
+      "group": "india_team",
+      "role": "India team generalist (self-described scope)",
+      "role_sources": [
+        "https://www.linkedin.com/posts/vasundhara-bhagat-01_this-week-i-joined-a-company-because-of-something-activity-7469636837209186304-aKmC",
+        "https://www.linkedin.com/posts/vasundhara-bhagat-01_for-most-of-my-career-i-thought-i-was-supposed-activity-7494988947123507200-qmm0"
+      ],
+      "linkedin_url": "https://www.linkedin.com/in/vasundhara-bhagat-01",
+      "location": {
+        "label": "Bengaluru, Karnataka, India (listed Wispr work location)",
+        "status": "confirmed_india",
+        "sources": [
+          "https://in.linkedin.com/in/vasundhara-bhagat-01"
+        ]
+      },
+      "facts": [
+        {
+          "text": "Moved from investing in consumer startups to generalist work across brand, product, distribution, campaigns, and partnerships.",
+          "source_url": "https://www.linkedin.com/posts/vasundhara-bhagat-01_for-most-of-my-career-i-thought-i-was-supposed-activity-7494988947123507200-qmm0"
+        },
+        {
+          "text": "Helped host a Bengaluru Wispr Flow event with The Product Folks and Elevation Capital.",
+          "source_url": "https://www.linkedin.com/posts/vasundhara-bhagat-01_the-number-of-people-whove-told-me-they-activity-7489900395792834560-fxj9"
+        }
+      ],
+      "photo": {
+        "path": "people/vasundhara-bhagat.jpg",
+        "source_url": "https://media.licdn.com/dms/image/v2/D5603AQEDgQNe7tEfmA/profile-displayphoto-scale_400_400/B56Z5o_SK7IQAk-/0/1779877880775?e=2147483647&v=beta&t=4DlKR1vnYSDULg5f-zukmH7rZzU6qojtPbfmzDjnRb0",
+        "source_page": "https://www.linkedin.com/posts/vasundhara-bhagat-01_this-week-i-joined-a-company-because-of-something-activity-7469636837209186304-aKmC",
+        "provenance": "Public LinkedIn post author portrait and matching author metadata",
+        "width": 400,
+        "height": 400,
+        "face": {
+          "cx": 0.495,
+          "cy": 0.443,
+          "w": 0.345
+        }
+      },
+      "notes": [
+        "Wispr employment and India work location are sourced; exact formal job title is unconfirmed."
+      ]
+    },
+    {
+      "id": "arpit-das",
+      "name": "Arpit Das",
+      "initials": "AD",
+      "group": "india_launch",
+      "role": "Growth team; India-launch contributor",
+      "role_sources": [
+        "https://www.linkedin.com/posts/arpit-das-9566a7214_headed-to-sf-this-fall-to-join-the-growth-activity-7359381514419150849-kGks",
+        "https://www.linkedin.com/posts/arpit-das-9566a7214_thanks-for-not-blocking-me-tanay-kothari-activity-7457450641335164928-0P2P"
+      ],
+      "linkedin_url": "https://www.linkedin.com/in/arpit-das-9566a7214",
+      "location": {
+        "label": "San Francisco, United States (listed Wispr work location); worked in Bengaluru on the India launch",
+        "status": "india_launch_current_base_unconfirmed",
+        "sources": [
+          "https://www.linkedin.com/in/arpit-das-9566a7214",
+          "https://www.linkedin.com/posts/arpit-das-9566a7214_thanks-for-not-blocking-me-tanay-kothari-activity-7457450641335164928-0P2P"
+        ]
+      },
+      "facts": [
+        {
+          "text": "Repeated cold emails earned him an interview despite having no previous growth-marketing experience, according to Tanay.",
+          "source_url": "https://www.linkedin.com/posts/arpit-das-9566a7214_thanks-for-not-blocking-me-tanay-kothari-activity-7457450641335164928-0P2P"
+        },
+        {
+          "text": "Organized an Apple Store protest stunt for Flow's Android launch, then worked with the Bengaluru team on the India launch.",
+          "source_url": "https://www.linkedin.com/posts/arpit-das-9566a7214_thanks-for-not-blocking-me-tanay-kothari-activity-7457450641335164928-0P2P"
+        }
+      ],
+      "photo": {
+        "path": "people/arpit-das.jpg",
+        "source_url": "https://media.licdn.com/dms/image/v2/D5603AQHatDwNAo7B0A/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1690989898096?e=2147483647&v=beta&t=s_mRM5t3g-PLmbKwr4WkTdFl-whetSjAv_5GRyTUZIA",
+        "source_page": "https://www.linkedin.com/posts/arpit-das-9566a7214_thanks-for-not-blocking-me-tanay-kothari-activity-7457450641335164928-0P2P",
+        "provenance": "Public LinkedIn post author portrait and matching author metadata",
+        "width": 400,
+        "height": 400,
+        "face": {
+          "cx": 0.475,
+          "cy": 0.41,
+          "w": 0.256
+        }
+      },
+      "notes": [
+        "Confirmed India-launch involvement does not establish a current India base."
+      ]
+    }
+  ]
+}
